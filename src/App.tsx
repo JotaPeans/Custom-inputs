@@ -22,6 +22,7 @@ function App() {
                 <form className="flex flex-col gap-10 w-full" onSubmit={e => handleSubmit(e)}>
                     <Input inputType="cpf" refInput={mailRef} />
                     <Input inputType="password" refInput={passRef} />
+                    <Input inputType="submit"/>
                     <input className="p-3 text-xl capitalize bg-slate-900/40 hover:bg-slate-900/60 transition-all rounded-xl cursor-pointer" type="submit" value="submit" />
                 </form>
 
