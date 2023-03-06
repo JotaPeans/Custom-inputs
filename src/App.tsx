@@ -3,12 +3,14 @@ import bg from "./bg.jpg";
 import { useRef } from "react";
 
 function App() {
-    const mailRef = useRef<HTMLInputElement>(null);
+    const cpfRef = useRef<HTMLInputElement>(null);
+    const telRef = useRef<HTMLInputElement>(null);
     const passRef = useRef<HTMLInputElement>(null);
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
-        console.log(mailRef.current?.value);
+        console.log(cpfRef.current?.value);
+        console.log(telRef.current?.value);
         console.log(passRef.current?.value);
     }
 
@@ -20,7 +22,8 @@ function App() {
             <div className="w-96 h-96 flex justify-center items-center bg-white/10 border border-slate-900/40 backdrop-blur-sm rounded-2xl p-4 py-10">
 
                 <form className="flex flex-col gap-10 w-full" onSubmit={e => handleSubmit(e)}>
-                    <Input inputType="cpf" refInput={mailRef} />
+                    <Input inputType="cpf" refInput={cpfRef} />
+                    <Input inputType="tel" refInput={telRef} />
                     <Input inputType="password" refInput={passRef} />
                     <Input inputType="submit"/>
                 </form>
