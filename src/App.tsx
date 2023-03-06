@@ -20,9 +20,9 @@ function App() {
             <div className="w-96 h-96 flex justify-center items-center bg-white/10 border border-slate-900/40 backdrop-blur-sm rounded-2xl p-4 py-10">
 
                 <form className="flex flex-col gap-10 w-full" onSubmit={e => handleSubmit(e)}>
-                    <Input refInput={mailRef} label="Email" />
-                    <Input refInput={passRef} label="Password" />
-                    <input className="p-3 text-xl capitalize bg-slate-900/40 hover:bg-slate-900/60 transition-all rounded-xl cursor-pointer" type="submit" value="submit" />
+                    <Input inputType="cpf" refInput={mailRef} />
+                    <Input inputType="password" refInput={passRef} />
+                    <Input inputType="submit"/>
                 </form>
 
             </div>
