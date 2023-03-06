@@ -82,7 +82,7 @@ const Input = ({inputType = "text", refInput, baseColor = "bg-slate-900/40" }: I
     }
 
     return (
-        <div className="flex flex-col justify-center relative">
+        <div className="flex flex-col justify-center relative w-full">
             <label className={`absolute transition-all ${labelState ? " -translate-y-11" : null} left-4 text-xl ${inputType === "submit" ? "hidden" : null} ${inputType === "cpf" ? "uppercase" : "capitalize"}`} htmlFor={inputType}>{inputType}</label>
             <input className="hidden" ref={refInput} type="text" />
             <input maxLength={inputType === "cpf" ? 14 : undefined} type={inputType} value={inputType === "submit" ? inputType : undefined} onChange={e => handleChange(e)} onKeyDown={e => setKey(e.key)} onBlur={handleBlur} onFocus={handleFocus} ref={ref} className={` h-12 ${baseColor} rounded-xl px-4 text-xl ${inputType === "submit" ? "cursor-pointer hover:bg-slate-900/60 transition-all" : null}`} id={inputType} />
